@@ -1,0 +1,41 @@
+{
+  "version": "5",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1704560317520,
+      "tag": "0000_milky_ravenous",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1704563872865,
+      "tag": "0001_equal_maestro",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1704564057441,
+      "tag": "0002_futuristic_the_hand",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1704628698642,
+      "tag": "0003_motionless_marvex",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1704629222384,
+      "tag": "0004_secret_puma",
+      "breakpoints": true
+    }
+  ]
+}

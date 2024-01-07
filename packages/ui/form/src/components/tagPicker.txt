@@ -1,0 +1,37 @@
+import { Controller } from "react-hook-form"
+import { ControlProps } from "../types"
+import { InputTags, SelectTags } from "@golfcart/ui"
+import ReactSelect from "react-select/creatable"
+
+interface formTagPickerProps extends ControlProps {
+  disabled?: boolean
+  placeholder?: string
+}
+
+function FormTagPicker({
+  disabled,
+  placeholder,
+  control,
+  name,
+}: formTagPickerProps) {
+  return (
+    <Controller
+      control={control}
+      name={name}
+      render={({ field: { ref, value, onBlur, onChange } }) => (
+        <SelectTags
+          ref={ref}
+          name={name}
+          value={value}
+          disabled={disabled}
+          placeholder={placeholder}
+          onBlur={onBlur}
+          onChange={onChange}
+        />
+      )}
+      defaultValue={[]}
+    />
+  )
+}
+
+export default FormTagPicker

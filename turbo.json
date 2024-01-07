@@ -1,0 +1,51 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "globalDependencies": ["**/.env", "tsconfig.json"],
+  "pipeline": {
+    "db:push": {
+      // "inputs": ["_journal.json"],
+      "cache": false
+    },
+    "db:studio": {
+      "cache": false
+    },
+    "dev": {
+      "cache": false
+    },
+    "build": {
+      "dependsOn": ["^build", "^db:generate"],
+      "outputs": [".next/**", "!.next/cache/**", "next-env.d.ts"]
+    },
+    "lint": {},
+    "lint:fix": {},
+    "clean": {
+      "cache": false
+    },
+    "//#clean": {
+      "cache": false
+    },
+    "type-check": {
+      "dependsOn": ["^db:generate"],
+      "cache": false
+    }
+  },
+  "globalEnv": [
+    "CI",
+    "DATABASE_URL",
+    "DAM_STORAGE_API",
+    "DAM_STORAGE_URL",
+    "DAM_QUEUE",
+    "PIXABAY_KEY",
+    "UNSPLASH_KEY",
+    "PEXELS_KEY",
+    "GIPHY_KEY",
+    "ICONFINDER_KEY",
+    "TENOR_KEY",
+    "HELPDESK_CHAT_CRYPTO_SECRET_KEY",
+    "NODE_ENV",
+    "SKIP_ENV_VALIDATION",
+    "PORT",
+    "VERCEL",
+    "VERCEL_URL"
+  ]
+}

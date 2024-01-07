@@ -1,0 +1,7 @@
+export { default as FormInputNumber } from "./numberInput"
+export { default as FormSelect } from "./select"
+export { default as FormSwitch } from "./switch"
+// export { default as FormTagPicker } from "./tagPicker"
+export { default as FormDescription } from "./textarea"
+export { default as FormInput } from "./input"
+export { default as FormUpload } from "./upload"

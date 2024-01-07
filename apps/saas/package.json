@@ -1,0 +1,53 @@
+{
+  "name": "@golfcart/saas",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm with-env next dev",
+    "build": "pnpm with-env next build",
+    "start": "pnpm with-env next start",
+    "lint": "dotenv -v SKIP_ENV_VALIDATION=1 next lint",
+    "with-env": "dotenv -e ../../.env --"
+  },
+  "dependencies": {
+    "@golfcart/auth": "workspace:*",
+    "@golfcart/db": "workspace:*",
+    "@golfcart/form": "workspace:*",
+    "@raikou/client": "^0.0.1-beta.9",
+    "@raikou/server": "^0.0.1-beta.9",
+    "@raikou/system": "^0.0.1-beta.9",
+    "@raikou/webpack": "^0.0.1-beta.9",
+    "@svgr/webpack": "^8.1.0",
+    "@t3-oss/env-nextjs": "^0.6.1",
+    "next": "^14.0.4",
+    "raw-loader": "^4.0.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-toastify": "^9.1.3",
+    "zod": "^3.22.2"
+  },
+  "devDependencies": {
+    "@golfcart/eslint-config": "^0.2.0",
+    "@golfcart/prettier-config": "^0.1.0",
+    "@golfcart/tsconfig": "^0.1.0",
+    "@types/node": "20.5.6",
+    "@types/react": "18.2.21",
+    "@types/react-dom": "18.2.7",
+    "dotenv-cli": "^7.3.0",
+    "eslint": "8.48.0",
+    "postcss-import": "^16.0.0",
+    "postcss-purgecss-raikou": "^0.0.1-beta.9",
+    "postcss-unocss-raikou": "^0.0.1-beta.9",
+    "postcss": "^8.4.33",
+    "typescript": "5.2.2"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@golfcart/eslint-config/base",
+      "@golfcart/eslint-config/nextjs",
+      "@golfcart/eslint-config/react"
+    ]
+  },
+  "prettier": "@golfcart/prettier-config"
+}
